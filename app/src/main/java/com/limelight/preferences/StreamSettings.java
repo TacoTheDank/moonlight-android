@@ -7,7 +7,6 @@ import android.content.pm.PackageManager;
 import android.media.MediaCodecInfo;
 import android.os.Build;
 import android.os.Bundle;
-import android.app.Activity;
 import android.os.Handler;
 import android.os.Vibrator;
 import android.preference.CheckBoxPreference;
@@ -26,6 +25,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowInsets;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.limelight.LimeLog;
 import com.limelight.PcView;
 import com.limelight.R;
@@ -36,7 +37,7 @@ import com.limelight.utils.UiHelper;
 import java.lang.reflect.Method;
 import java.util.Arrays;
 
-public class StreamSettings extends Activity {
+public class StreamSettings extends AppCompatActivity {
     private PreferenceConfiguration previousPrefs;
 
     // HACK for Android 9

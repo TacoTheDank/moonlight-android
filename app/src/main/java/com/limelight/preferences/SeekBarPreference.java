@@ -1,6 +1,5 @@
 package com.limelight.preferences;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.preference.DialogPreference;
@@ -13,6 +12,8 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AlertDialog;
 
 import java.util.Locale;
 

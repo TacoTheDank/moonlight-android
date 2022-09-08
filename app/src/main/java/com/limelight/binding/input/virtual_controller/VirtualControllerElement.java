@@ -4,7 +4,6 @@
 
 package com.limelight.binding.input.virtual_controller;
 
-import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Canvas;
@@ -13,6 +12,8 @@ import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
+
+import androidx.appcompat.app.AlertDialog;
 
 import org.json.JSONException;
 import org.json.JSONObject;

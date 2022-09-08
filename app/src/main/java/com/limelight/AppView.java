@@ -22,7 +22,6 @@ import com.limelight.utils.ShortcutHelper;
 import com.limelight.utils.SpinnerDialog;
 import com.limelight.utils.UiHelper;
 
-import android.app.Activity;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Intent;
@@ -47,9 +46,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import org.xmlpull.v1.XmlPullParserException;
 
-public class AppView extends Activity implements AdapterFragmentCallbacks {
+public class AppView extends AppCompatActivity implements AdapterFragmentCallbacks {
     private AppGridAdapter appGridAdapter;
     private String uuidString;
     private ShortcutHelper shortcutHelper;
@@ -140,7 +141,7 @@ public class AppView extends Activity implements AdapterFragmentCallbacks {
                             // cause the activity to be destroyed when we try to commit
                             // I haven't been able to, so we have this try-catch block.
                             try {
-                                getFragmentManager().beginTransaction()
+                                getSupportFragmentManager().beginTransaction()
                                         .replace(R.id.appFragmentContainer, new AdapterFragment())
                                         .commitAllowingStateLoss();
                             } catch (IllegalStateException e) {
@@ -169,7 +170,7 @@ public class AppView extends Activity implements AdapterFragmentCallbacks {
 
             try {
                 // Reinflate the app grid itself to pick up the layout change
-                getFragmentManager().beginTransaction()
+                getSupportFragmentManager().beginTransaction()
                         .replace(R.id.appFragmentContainer, new AdapterFragment())
                         .commitAllowingStateLoss();
             } catch (IllegalStateException e) {

@@ -38,7 +38,6 @@ import com.limelight.utils.UiHelper;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.app.PictureInPictureParams;
 import android.app.Service;
 import android.content.ComponentName;
@@ -77,6 +76,8 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.ByteArrayInputStream;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -86,7 +87,7 @@ import java.security.cert.X509Certificate;
 import java.util.Locale;
 
 
-public class Game extends Activity implements SurfaceHolder.Callback,
+public class Game extends AppCompatActivity implements SurfaceHolder.Callback,
     OnGenericMotionListener, OnTouchListener, NvConnectionListener, EvdevListener,
     OnSystemUiVisibilityChangeListener, GameGestures, StreamView.InputCallbacks,
     PerfOverlayListener, UsbDriverService.UsbDriverStateListener

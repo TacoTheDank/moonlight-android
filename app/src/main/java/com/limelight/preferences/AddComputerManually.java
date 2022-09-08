@@ -21,7 +21,6 @@ import com.limelight.utils.ServerHelper;
 import com.limelight.utils.SpinnerDialog;
 import com.limelight.utils.UiHelper;
 
-import android.app.Activity;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Context;
@@ -36,7 +35,9 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class AddComputerManually extends Activity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class AddComputerManually extends AppCompatActivity {
     private TextView hostText;
     private ComputerManagerService.ComputerManagerBinder managerBinder;
     private final LinkedBlockingQueue<String> computersToAdd = new LinkedBlockingQueue<>();

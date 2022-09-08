@@ -1,12 +1,13 @@
 package com.limelight;
 
-import android.app.Activity;
 import android.app.Service;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.limelight.computers.ComputerManagerListener;
 import com.limelight.computers.ComputerManagerService;
@@ -23,7 +24,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.UUID;
 
-public class ShortcutTrampoline extends Activity {
+public class ShortcutTrampoline extends AppCompatActivity {
     private String uuidString;
     private NvApp app;
     private ArrayList<Intent> intentStack = new ArrayList<>();

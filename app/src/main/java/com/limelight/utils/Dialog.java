@@ -3,9 +3,10 @@ package com.limelight.utils;
 import java.util.ArrayList;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.widget.Button;
+
+import androidx.appcompat.app.AlertDialog;
 
 import com.limelight.R;
 

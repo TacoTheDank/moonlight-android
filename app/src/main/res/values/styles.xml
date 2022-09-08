@@ -6,7 +6,7 @@
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
 
     -->
-    <style name="AppBaseTheme" parent="android:Theme">
+    <style name="AppBaseTheme" parent="Theme.AppCompat">
         <!--
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
@@ -18,8 +18,8 @@
     <!-- Application theme. -->
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
     <style name="StreamBaseTheme" parent="AppBaseTheme">
@@ -30,8 +30,8 @@
     <!-- Stream activity theme -->
     <style name="StreamTheme" parent="StreamBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
-        <item name="android:windowActionBar">false</item>
-        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
 </resources>

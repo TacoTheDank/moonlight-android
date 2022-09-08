@@ -28,7 +28,6 @@ import com.limelight.utils.ServerHelper;
 import com.limelight.utils.ShortcutHelper;
 import com.limelight.utils.UiHelper;
 
-import android.app.Activity;
 import android.app.ActivityManager;
 import android.app.Service;
 import android.content.ComponentName;
@@ -54,12 +53,14 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 import android.widget.AdapterView.AdapterContextMenuInfo;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import org.xmlpull.v1.XmlPullParserException;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
 
-public class PcView extends Activity implements AdapterFragmentCallbacks {
+public class PcView extends AppCompatActivity implements AdapterFragmentCallbacks {
     private RelativeLayout noPcFoundLayout;
     private PcGridAdapter pcGridAdapter;
     private ShortcutHelper shortcutHelper;
@@ -167,7 +168,7 @@ public class PcView extends Activity implements AdapterFragmentCallbacks {
             helpButton.setVisibility(View.GONE);
         }
 
-        getFragmentManager().beginTransaction()
+        getSupportFragmentManager().beginTransaction()
             .replace(R.id.pcFragmentContainer, new AdapterFragment())
             .commitAllowingStateLoss();
 

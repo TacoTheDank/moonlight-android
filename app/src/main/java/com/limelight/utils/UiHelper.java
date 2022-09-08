@@ -1,7 +1,6 @@
 package com.limelight.utils;
 
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.GameManager;
 import android.app.GameState;
 import android.app.LocaleManager;
@@ -17,7 +16,8 @@ import android.view.View;
 import android.view.WindowInsets;
 import android.view.WindowManager;
 
-import com.limelight.Game;
+import androidx.appcompat.app.AlertDialog;;
+
 import com.limelight.R;
 import com.limelight.nvstream.http.ComputerDetails;
 import com.limelight.preferences.PreferenceConfiguration;
